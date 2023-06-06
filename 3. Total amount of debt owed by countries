@@ -1,0 +1,4 @@
+SELECT `country_name`, ROUND(SUM(`debt`),0) AS total_debt
+FROM `int_debt_table`
+GROUP BY `country_name`
+ORDER BY total_debt DESC;

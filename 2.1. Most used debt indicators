@@ -1,0 +1,4 @@
+SELECT `indicator_name`,COUNT(`indicator_name`) AS indicator_debt_total
+FROM `int_debt_table`
+GROUP BY `indicator_name`
+ORDER BY indicator_debt_total DESC;

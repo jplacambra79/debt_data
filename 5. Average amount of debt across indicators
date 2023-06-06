@@ -1,0 +1,5 @@
+SELECT `country_name`,`indicator_name`, `indicator_code`, AVG(`debt`) AS avg_debt
+FROM `int_debt_table` 
+WHERE `country_name` NOT IN ("Least developed countries: UN classification","IDA only","South Asia")
+GROUP BY `country_name`, `indicator_name`,`indicator_code`
+ORDER BY avg_debt DESC;

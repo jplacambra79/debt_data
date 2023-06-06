@@ -1,0 +1,5 @@
+SELECT `country_name`,`indicator_name`, `indicator_code`, SUM(`debt`) AS total_debt
+FROM `int_debt_table` 
+WHERE `country_name` NOT IN ("Least developed countries: UN classification","IDA only","South Asia") 
+AND `indicator_code`= "DT.AMT.PRVT.CD"
+GROUP BY `country_name`, `indicator_name`,`indicator_code`

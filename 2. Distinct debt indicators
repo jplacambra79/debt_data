@@ -1,0 +1,2 @@
+SELECT DISTINCT `indicator_code` AS indicator_debt_disc
+FROM `int_debt_table`;

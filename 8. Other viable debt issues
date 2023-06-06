@@ -1,0 +1,5 @@
+SELECT `country_name`, `indicator_code`,`indicator_name`,MAX(`debt`) AS max_debt
+FROM `int_debt_table`
+WHERE `country_name` NOT IN ("Least developed countries: UN classification","IDA only","South Asia") 
+GROUP BY `country_name`, `indicator_code`,`indicator_name`
+ORDER BY max_debt DESC;
